@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roast Me AI — Get Absolutely Cooked</title>
+<meta name="description" content="Upload a photo, choose your roast mode, answer three chaotic questions, and get your personalized roast.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+<header class="topbar">
+  <div class="logo">🔥 ROAST<span>ME</span></div>
+  <div class="badge">BETA • 100% CHAOTIC</div>
+</header>
+
+<main>
+<section class="hero">
+  <p class="eyebrow">THE INTERNET'S MOST UNNECESSARY AI</p>
+  <h1>SHOW US THE<br><span>VICTIM.</span></h1>
+  <p class="sub">Upload your photo. Pick your destruction. Reveal 3 questionable facts. Get cooked.</p>
+</section>
+
+<section class="card" id="app">
+  <div class="step">
+    <div class="step-head"><span>01</span><h2>Upload your photo</h2></div>
+    <label class="upload" for="photo">
+      <input id="photo" type="file" accept="image/*">
+      <div id="uploadContent">
+        <div class="upload-icon">📸</div>
+        <strong>SHOW US THE VICTIM</strong>
+        <small>Tap to choose a selfie</small>
+      </div>
+      <img id="preview" alt="Your photo preview">
+      <button class="remove-photo" id="removePhoto" type="button" aria-label="Remove photo">×</button>
+    </label>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span>02</span><h2>Choose your destruction</h2></div>
+    <div class="modes" id="modes">
+      <button type="button" data-mode="normal"><b>😌 Normal</b><small>Playfully disrespectful</small></button>
+      <button type="button" data-mode="nuclear"><b>☢️ Nuclear</b><small>No mercy. You asked.</small></button>
+      <button type="button" data-mode="brainrot"><b>🧠 Brainrot</b><small>Zero sanity detected</small></button>
+      <button type="button" data-mode="indian"><b>🇮🇳 Indian</b><small>Desi emotional damage</small></button>
+      <button type="button" data-mode="ex"><b>💔 Ex Roast</b><small>Your lore is evidence</small></button>
+      <button type="button" data-mode="genz"><b>✨ Gen-Z</b><small>Aura. Rizz. Delusion.</small></button>
+      <button type="button" data-mode="fbi"><b>🕵️ FBI</b><small>We connect the dots</small></button>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <span>03</span>
+      <div>
+        <h2>Choose 3 secrets <em>👀</em></h2>
+        <p class="hint">Pick the questions that expose you the most. <b id="count">0/3</b></p>
+      </div>
+    </div>
+    <div class="questions" id="questions"></div>
+  </div>
+
+  <button class="cook" id="cook" type="button" disabled>🔥 COOK ME <span>→</span></button>
+  <p class="status" id="status">Upload a photo, choose 3 questions, and answer them.</p>
+  <p class="tiny">Your photo stays in your browser in this demo. No upload is sent anywhere.</p>
+</section>
+
+<section class="result hidden" id="result">
+  <div class="result-top">
+    <span class="eyebrow">ROAST ANALYSIS COMPLETE</span>
+    <span class="stamp">💀 COOKED</span>
+  </div>
+  <div class="result-photo-wrap"><img id="resultPhoto" alt="Your roast result"></div>
+  <h2 id="verdict">ABSOLUTELY COOKED</h2>
+  <div class="stats" id="stats"></div>
+  <div class="roast-box">
+    <div class="roast-label">🔥 YOUR PERSONALIZED ROAST</div>
+    <div id="roastText"></div>
+  </div>
+  <div class="final-box" id="finalBox"></div>
+  <div class="actions">
+    <button id="again" type="button">🔄 ROAST AGAIN</button>
+    <button id="share" type="button">📤 SHARE MY ROAST</button>
+    <button id="friend" type="button">👯 ROAST MY FRIEND</button>
+  </div>
+  <p class="disclaimer">For fun only. Roasts are playful and don't judge protected or sensitive traits.</p>
+</section>
+</main>
+
+<footer>ROASTME AI • MADE FOR PEOPLE WITH QUESTIONABLE DECISIONS</footer>
+<script src="app.js"></script>
+</body>
+</html>
